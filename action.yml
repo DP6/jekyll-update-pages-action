@@ -1,0 +1,40 @@
+# Copyright 2021 DP6 Inc
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     https://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License. 
+
+name: 'Jekyll update github pages without new commit'
+author: DP6
+description: 'Update multiple gh-pages without generating new commit, trigger at a scheduled time. This action is ideal to work with github pages with remote_theme'
+inputs:
+  DEPLOY_TOKEN:  # id of input
+    description: 'Personal access token of use with access to repositories with github pages enable'
+    required: true
+  USER:  # id of input
+    description: 'username of perspmaç access token'
+    required: true
+  FILTER:  # id of input
+    description: 'Filter to use in github search api for repositories'
+    required: true
+    default: 's%3Apublic%20org%3Adp6'
+outputs:
+  search-result: # id of output
+    description: 'The repositories result of search using filter parameter'
+  update-gh-pages: # id of output
+    description: 'Job status of update github pages'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.USER }}
+    - ${{ inputs.DEPLOY_TOKEN }}
+    - ${{ inputs.FILTER }}
