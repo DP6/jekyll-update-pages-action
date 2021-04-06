@@ -25,7 +25,7 @@ inputs:
   FILTER:  # id of input
     description: 'Filter to use in github search api for repositories'
     required: true
-    default: 's%3Apublic%20org%3Adp6'
+    default: 'is%3Apublic%20org%3Adp6'
 outputs:
   search-result: # id of output
     description: 'The repositories result of search using filter parameter'

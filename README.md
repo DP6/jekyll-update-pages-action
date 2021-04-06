@@ -15,3 +15,21 @@
 
 update multiple gh-pages without generating new commit
 
+
+## Como contribuir
+
+Pull requests são bem-vindos! Nós vamos adorar ajuda para evoluir esse modulo. Sinta-se livre para navegar por issues abertas buscando por algo que possa fazer. Caso tenha uma nova feature ou bug, por favor abra uma nova issue para ser acompanhada pelo nosso time.
+
+### Requisitos obrigatórios
+
+Só serão aceitas as contribuições que estiverem seguindo os seguintes requisitos:
+
+- [Padrão de commit](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Suporte:
+
+**DP6 Koopa-troopa Team**
+
+_e-mail: <koopas@dp6.com.br>_
+
+<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/koopa.png" height="100" />
