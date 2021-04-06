@@ -14,7 +14,7 @@
 
 name: 'Jekyll update github pages without new commit'
 author: DP6
-description: 'Update multiple gh-pages without generating new commit, trigger at a scheduled time. This action is ideal to work with github pages with remote_theme'
+description: 'Update multiple gh-pages without generating new commit, trigger at a scheduled time.'
 inputs:
   DEPLOY_TOKEN:  # id of input
     description: 'Personal access token of use with access to repositories with github pages enable'
