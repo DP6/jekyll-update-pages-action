@@ -13,20 +13,94 @@
   </a>
 </p>
 
-update multiple gh-pages without generating new commit
+Action to update multiple gh-pages without generating new commit.
+## Table of Contents
 
+* [Usage](#usage)
+* [Inputs](#inputs)
+* [Example Workflows](#example-workflows)
 
-## Como contribuir
+## Usage
+The example update all github-pages available in organization dp6 with visibility public, every day at 00:30.
 
-Pull requests são bem-vindos! Nós vamos adorar ajuda para evoluir esse modulo. Sinta-se livre para navegar por issues abertas buscando por algo que possa fazer. Caso tenha uma nova feature ou bug, por favor abra uma nova issue para ser acompanhada pelo nosso time.
+### Prerequisites
+* [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) 
+* [Choose search filters](https://docs.github.com/en/rest/reference/search#search-repositories)
+* [Encode the filter](https://www.url-encode-decode.com/)
 
-### Requisitos obrigatórios
+```yaml
+name: Update all github pages
 
-Só serão aceitas as contribuições que estiverem seguindo os seguintes requisitos:
+on:
+  schedule:
+    - cron: "30 0 * * *"
 
-- [Padrão de commit](https://www.conventionalcommits.org/en/v1.0.0/)
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    name: Update Github Pages Initiatives
+    steps:
+    - name: Jekyll update github pages without new commit
+      uses: DP6/jekyll-update-pages-action@v1.0.1
+      with:
+        DEPLOY_TOKEN: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
+        USER: ${{ secrets.GH_PAGES_USER }}
+        FILTER:  'is%3Apublic%20org%3Adp6'
+```
 
-## Suporte:
+## Inputs
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Requirement</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`DEPLOY_TOKEN`</td>
+      <td>required</td>
+      <td></td>
+      <td>
+       Personal access token of use with access to repositories with github pages enable
+      </td>
+    </tr>
+    <tr>
+      <td>`USER`</td>
+      <td>required</td>
+      <td></td>
+      <td>Username of personal access token</td>
+    </tr>
+    <tr>
+      <td>`FILTER`</td>
+      <td> optional</td>
+      <td>is%3Apublic%20org%3Adp6</td>
+      <td>
+       Filter to use in github search api for repositories
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+
+## Example Workflows
+The [dp6.github.io](https://dp6.github.io?utm_medium=README&utm_source=github&utm_campaign=gitacion) website is built with Jekyll and serves as a theme for the other repositories of the DP6 organization on github.
+<img alt="Architecture dp6.github.io" src="https://github.com/DP6/templates-centro-de-inovacoes/raw/main/public/images/dp6-gh-pages-architecture.png"></img>
+
+## How to contribute
+
+Pull requests are welcome! We will love help to evolve this module. Feel free to browse open issues looking for something you can do. If you have a new feature or bug, please open a new issue to be followed up by our team.
+
+### Mandatory requirements
+
+Only contributions that meet the following requirements will be accepted:
+
+- [Commit pattern] (https://www.conventionalcommits.org/en/v1.0.0/)
+
+## Support:
 
 **DP6 Koopa-troopa Team**
 

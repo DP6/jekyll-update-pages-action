@@ -23,7 +23,7 @@ inputs:
     description: 'Personal access token of use with access to repositories with github pages enable'
     required: true
   USER:  # id of input
-    description: 'username of perspmaç access token'
+    description: 'username of personal access token'
     required: true
   FILTER:  # id of input
     description: 'Filter to use in github search api for repositories'
