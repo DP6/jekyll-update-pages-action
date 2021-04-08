@@ -29,7 +29,7 @@ The example update all github-pages available in organization dp6 with visibilit
 * [Encode the filter](https://www.url-encode-decode.com/)
 
 ```yaml
-name: Update all github pages
+name: Update all GitHub Pages sites
 
 on:
   schedule:
@@ -38,14 +38,14 @@ on:
 jobs:
   github-pages:
     runs-on: ubuntu-latest
-    name: Update Github Pages Initiatives
+    name: Update GitHub Pages initiatives
     steps:
-    - name: Jekyll update github pages without new commit
-      uses: DP6/jekyll-update-pages-action@v1.0.1
-      with:
-        DEPLOY_TOKEN: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-        USER: ${{ secrets.GH_PAGES_USER }}
-        FILTER:  'is%3Apublic%20org%3Adp6'
+      - name: Jekyll update github pages without new commit
+        uses: DP6/jekyll-update-pages-action@v1.0.1
+        with:
+          DEPLOY_TOKEN: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
+          USER: ${{ secrets.GH_PAGES_USER }}
+          FILTER: 'is%3Apublic%20org%3Adp6'
 ```
 
 ## Inputs
