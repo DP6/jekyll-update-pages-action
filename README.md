@@ -17,9 +17,9 @@ Action to update one or more repos which have GitHub Pages enabled - without gen
 
 ## Table of Contents
 
-* [Usage](#usage)
-* [Inputs](#inputs)
-* [Example Workflows](#example-workflows)
+- [Usage](#usage)
+- [Inputs](#inputs)
+- [Example Workflows](#example-workflows)
 
 ## Usage
 
@@ -27,9 +27,9 @@ The example here will run at 0:30 daily to update all GitHub Pages sites availab
 
 ### Prerequisites
 
-* [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-* [Choose search filters](https://docs.github.com/en/rest/reference/search#search-repositories)
-* [Encode the filter](https://www.url-encode-decode.com/)
+- [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- [Choose search filters](https://docs.github.com/en/rest/reference/search#search-repositories)
+- [Encode the filter](https://www.url-encode-decode.com/)
 
 ```yaml
 name: Update all GitHub Pages sites
@@ -48,7 +48,7 @@ jobs:
         with:
           DEPLOY_TOKEN: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
           USER: ${{ secrets.GH_PAGES_USER }}
-          FILTER: 'is%3Apublic%20org%3Adp6'
+          FILTER: "is%3Apublic%20org%3Adp6"
 ```
 
 ## Inputs
@@ -65,7 +65,7 @@ jobs:
 
 The [dp6.github.io](https://dp6.github.io?utm_medium=README&utm_source=github&utm_campaign=gitacion) website is built with Jekyll and serves as a theme for the other repositories of the DP6 organization on github.
 
-<img alt="Architecture dp6.github.io" src="https://github.com/DP6/templates-centro-de-inovacoes/raw/main/public/images/dp6-gh-pages-architecture.png"></img>
+<img alt="Architecture dp6.github.io" src="https://github.com/DP6/templates-centro-de-inovacoes/raw/main/public/images/dp6-gh-pages-architecture.png">
 
 ## How to contribute
 
