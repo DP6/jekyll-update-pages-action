@@ -13,7 +13,7 @@
   </a>
 </p>
 
-Action to update multiple gh-pages without generating new commit.
+Action to update one or more repos which have GitHub Pages enabled - without generating a new commit.
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ Action to update multiple gh-pages without generating new commit.
 
 ## Usage
 
-The example update all github-pages available in organization dp6 with visibility public, every day at 00:30.
+The example here will run at 0:30 daily to update all GitHub Pages sites available in the [DP6](https://github.com/DP6) which are public repos.
 
 ### Prerequisites
 
