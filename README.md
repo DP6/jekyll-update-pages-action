@@ -53,40 +53,12 @@ jobs:
 
 ## Inputs
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Requirement</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`DEPLOY_TOKEN`</td>
-      <td>required</td>
-      <td></td>
-      <td>
-       Personal access token of use with access to repositories with github pages enable
-      </td>
-    </tr>
-    <tr>
-      <td>`USER`</td>
-      <td>required</td>
-      <td></td>
-      <td>Username of personal access token</td>
-    </tr>
-    <tr>
-      <td>`FILTER`</td>
-      <td> optional</td>
-      <td>is%3Apublic%20org%3Adp6</td>
-      <td>
-       Filter to use in github search api for repositories
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name           | Requirement | Default                   | Description                                        |
+| -------------- | ----------- | ------------------------- | -------------------------------------------------- |
+| `DEPLOY_TOKEN` | required    |                           | Personal Access Token for accessing GitHub API     |
+| `USER`         | required    |                           | Username of the owner of the Personal Access Token |
+| `FILTER`       | optional    | `is%3Apublic%20org%3Adp6` | Find repositories matching this filter             |
+
 <br/>
 
 ## Example Workflows
