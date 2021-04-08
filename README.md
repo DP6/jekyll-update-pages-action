@@ -1,9 +1,9 @@
 # jekyll-update-pages-action
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/centro_de_inovacao_dp6.png" height="100px" />
-
+  <img src="https://raw.githubusercontent.com/DP6/templates-centro-de-inovacoes/main/public/images/centro_de_inovacao_dp6.png" height="100px" />
 </div>
+
 <p align="center">
   <a href="#badge">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
@@ -14,6 +14,7 @@
 </p>
 
 Action to update multiple gh-pages without generating new commit.
+
 ## Table of Contents
 
 * [Usage](#usage)
@@ -21,10 +22,12 @@ Action to update multiple gh-pages without generating new commit.
 * [Example Workflows](#example-workflows)
 
 ## Usage
+
 The example update all github-pages available in organization dp6 with visibility public, every day at 00:30.
 
 ### Prerequisites
-* [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) 
+
+* [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 * [Choose search filters](https://docs.github.com/en/rest/reference/search#search-repositories)
 * [Encode the filter](https://www.url-encode-decode.com/)
 
@@ -87,7 +90,9 @@ jobs:
 <br/>
 
 ## Example Workflows
+
 The [dp6.github.io](https://dp6.github.io?utm_medium=README&utm_source=github&utm_campaign=gitacion) website is built with Jekyll and serves as a theme for the other repositories of the DP6 organization on github.
+
 <img alt="Architecture dp6.github.io" src="https://github.com/DP6/templates-centro-de-inovacoes/raw/main/public/images/dp6-gh-pages-architecture.png"></img>
 
 ## How to contribute
