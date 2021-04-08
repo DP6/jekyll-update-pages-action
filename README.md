@@ -64,7 +64,7 @@ jobs:
   </thead>
   <tbody>
     <tr>
-      <td>`DEPLOY_TOKEN`</td>
+      <td><code>DEPLOY_TOKEN</code></td>
       <td>required</td>
       <td></td>
       <td>
@@ -72,13 +72,13 @@ jobs:
       </td>
     </tr>
     <tr>
-      <td>`USER`</td>
+      <td><code>USER</code></td>
       <td>required</td>
       <td></td>
       <td>Username of personal access token</td>
     </tr>
     <tr>
-      <td>`FILTER`</td>
+      <td><code>FILTER</code></td>
       <td> optional</td>
       <td>is%3Apublic%20org%3Adp6</td>
       <td>
