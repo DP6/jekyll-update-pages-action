@@ -98,7 +98,7 @@ Pull requests are welcome! We will love help to evolve this module. Feel free to
 
 Only contributions that meet the following requirements will be accepted:
 
-- [Commit pattern] (https://www.conventionalcommits.org/en/v1.0.0/)
+- [Commit pattern](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ## Support:
 
