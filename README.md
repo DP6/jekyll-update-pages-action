@@ -8,8 +8,8 @@
   <a href="#badge">
     <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
   </a>
-  <a href="https://www.codacy.com/gh/DP6/jekyll-update-pages-action/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/penguin-datalayer-core&amp;utm_campaign=Badge_Grade">
-    <img src="https://app.codacy.com/project/badge/Grade/ac10d2fd82a0471889b151b14e560f20"/>
+  <a href="https://www.codacy.com/gh/DP6/jekyll-update-pages-action/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=DP6/jekyll-update-pages-action&amp;utm_campaign=Badge_Grade">
+    <img src="https://app.codacy.com/project/badge/Grade/1a3f49bd2ffe4be29af8dec3cef0f5ef"/>
   </a>
 </p>
 
