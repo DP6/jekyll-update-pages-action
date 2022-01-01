@@ -19,22 +19,16 @@ filter=$3
 
 # List of all repositories matching filter.
 repos_response=$(curl "https://api.github.com/search/repositories?q=${filter}" -H "Accept: application/vnd.github.v3+json")
-output=$(echo "$repos_response" | jq '.[]' | jq '[.[] | select(.homepage != null) | {name: .name, homepage:.homepage}]')
+output=$(jq '.items[] | select(.homepage != null) | {full_name, homepage}' <<< "$repos_response")
 
-echo "$output" | jq '.'
+jq '.' <<< "$output"
 
-_jq() {
-  echo "$row" | base64 --decode | jq -r "$1"
-}
-
-for row in $(echo "${output}" | jq -r '.[] | @base64'); do
-  repo=$(_jq '.name')
-
+jq -r '.full_name' <<< "$output" | while read repo; do
   echo "Update gh-pages $repo"
+
   # Deploy GitHub pages
-  response=$(curl -u "$username:$token" \
-    -X POST "https://api.github.com/repos/dp6/$repo/pages/builds" \
+  curl -u "$username:$token" \
+    -X POST "https://api.github.com/repos/$repo/pages/builds" \
     -H "Accept: application/vnd.github.mister-fantastic-preview+json" \
-  )
-  echo "$response" | jq '.'
+    | jq '.'
 done
